@@ -17,11 +17,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen';
-import LoginScreen from './screens/LoginScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import AboutScreen from './screens/AboutScreen';
-import SearchPapersScreen from './screens/SearchPapersScreen';
+import HomeScreen from './HomeScreen';
+import LoginScreen from './LoginScreen';
+import RegisterScreen from './RegisterScreen';
+import AboutScreen from './AboutScreen';
+import SearchPapersScreen from './SearchPapersScreen';
+import PDFViewerScreen from './PDFViewerScreen';
+;
 
 const Stack = createStackNavigator();
 
@@ -34,7 +36,7 @@ export default function App() {
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="SearchPapers" component={SearchPapersScreen} options={{ title: 'Search Papers' }} />
-        <Stack.Screen name="PDFViewer" component={PDFViewerScreen} options={{ title: 'View PDF' }} />
+        {/* <Stack.Screen name="PDFViewer" component={PDFViewerScreen} options={{ title: 'View PDF' }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
